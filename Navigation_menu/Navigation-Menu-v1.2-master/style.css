@@ -1,0 +1,114 @@
+/* 
+    Project: Navigation Menu v1.2
+    Created: Wednesday, 2 February 2022
+    Author: Jamshid Elmi 
+    Tutorial: https://youtu.be/0gY3GBzZq8w
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+
+:root {
+  --test: rgb(47, 160, 47);
+  --rgb: 47, 160, 47;
+  --primary-color: rgba(var(--rgb));
+  --secondary-color: rgba(var(--rgb), .20);
+  --background: rgba(var(--rgb), .10);
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--background);
+}
+
+.container {
+  position: absolute;
+  display: flex;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.tabs {
+  display: flex;
+  background-color: white;
+  box-shadow: 0 0 1px 0 
+  rgba(var(--rgb), 0.15),
+  0 6px 12px 0 
+  rgba(var(--rgb), 0.15);
+  padding: 0.75rem;
+  border-radius: 99px;
+}
+
+input[type=radio] {
+  display: none;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 54px;
+  width: 200px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.15s ease-in;
+}
+
+@media (max-width: 700px) {
+  .tabs {
+    transform: scale(0.6);
+  }
+}
+
+.notification {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  margin-left: 0.75rem;
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+  transition: 0.15s ease-in;
+}
+
+input[type=radio]:checked + label {
+  color: var(--primary-color);
+} 
+
+.glider {
+  position: absolute;
+  display: flex;
+  height: 54px;
+  width: 200px;
+  background-color: var(--secondary-color);
+  border-radius: 99px;
+  transition: 0.25s ease-out;
+}
+
+input[type=radio]:checked + label > .notification {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+input[id=radio-1]:checked ~ .glider {
+  transform: translateX(0);
+}
+
+input[id=radio-2]:checked ~ .glider {
+  transform: translateX(100%);
+}
+
+input[id=radio-3]:checked ~ .glider {
+  transform: translateX(200%);
+}

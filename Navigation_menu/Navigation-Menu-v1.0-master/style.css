@@ -1,0 +1,122 @@
+/**
+*  @project   Navigation Menu v1.0
+*  @author    Jamshid Elmi
+*  @created   2022-04-06 05:09:47
+*  @modified  2022-04-06 05:09:47
+*  @tutorial  https://youtu.be/HB_3PolUWNU
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #e1e1e1;
+}
+
+.list-wrap {
+  display: flex;
+  width: 100%;
+  height: 80px;
+  background-color: #2F3542;
+  list-style: none;
+  justify-content: space-around;
+  padding: 0 20px;
+}
+
+.list-wrap li ion-icon {
+  position: relative;
+  font-size: 2em;
+  color: #A4B0Be;
+  transition: all .6s ease;
+}
+
+.list-wrap li {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transition: all .5s ease;
+}
+
+nav {
+  width: 440px;
+}
+
+.phone {
+  display: flex;
+  align-items: flex-end;
+  height: 500px;
+  border: 7px solid #3331;
+  border-radius: 20px;
+  overflow: hidden;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  transition: background .2s ease-in;
+}
+
+.phone .page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(500px + 27px);
+  width: 100%;
+  font-size: 3em;
+  font-weight: 600;
+  color: #3334;
+  text-transform: uppercase;
+  letter-spacing: 2pt;
+  padding-top: 50px;
+}
+
+.list-wrap li.active {
+  margin-top: -10px;
+}
+
+.list-wrap li::before {
+  content: "";
+  position: absolute;
+  height: 80%;
+  width: 80%;
+  background: var(--color);
+  left: 10%;
+  top: 10%;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: all .5s ease-in;
+}
+
+.list-wrap li.active::before {
+  transform: scale(1);
+}
+
+.list-wrap li.active ion-icon {
+  color: #2F3542;
+}
+
+.wave-wrap {
+  position: relative;
+  width: 100%;
+  height: 33px;
+  overflow: hidden;
+  margin-bottom: 0;
+  bottom: -1px;
+}
+
+.wave-wrap .wave {
+  position: absolute;
+  width: 150px;
+  transform-origin: bottom;
+  transform: scaleY(0.8);
+  transition:  all 0.5s cubic-bezier(
+    0.64, -0.27, 0.56, 1.49
+  );
+}
