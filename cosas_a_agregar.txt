@@ -1,0 +1,99 @@
+🎨 Componentes CSS que deberías agregar
+⭐ Prioridad alta (imprescindibles)
+
+Buttons (primary, secondary, danger, outline)
+
+Cards
+
+Navigation bar
+
+Sidebar
+
+Forms (inputs, textarea, select, checkbox, radio)
+
+Tables
+
+Grid / layout system
+
+⭐ Muy valorados por reclutadores
+
+Modal
+
+Dropdown
+
+Tabs
+
+Accordion
+
+Tooltip
+
+Breadcrumb
+
+Pagination
+
+Alerts / Notifications
+
+📐 Layout & estructura
+
+Esto separa un repo “normal” de uno pro:
+
+Flexbox utilities
+
+CSS Grid examples
+
+Sticky header / footer
+
+Responsive layout
+
+Container system
+
+Spacing system (margin/padding)
+
+🌗 Temas y variantes (TOP)
+
+Esto suma MUCHO:
+
+Light / Dark mode
+
+Theme variables (CSS variables)
+
+Color palette
+
+Typography system
+
+Font scale
+
+Ejemplo:
+
+:root {
+  --primary: #2563eb;
+  --spacing-sm: 8px;
+}
+
+🎬 Interacciones y efectos
+
+CSS puro bien hecho = 🔥
+
+Hover / focus states
+
+Transitions
+
+Animations (keyframes)
+
+Loading spinners
+
+Skeleton loaders
+
+📱 Responsive & accesibilidad
+
+Muy importante hoy:
+
+Mobile-first
+
+Media queries
+
+Accessible focus states
+
+ARIA-friendly styles
+
+Reduced motion support
