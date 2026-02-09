@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font: 400 2rem "Helvetica", sans-serif;
+    color: #7a7a8c;
+    background: #1d1e22;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAMCAQAAADxYuQrAAAAWklEQVQI12NgAAFZBgRQBBGSDJITRRFiPUA+w0RRIIUCkPlGQGiGKq3XI9mo1iHLoIcsqAaltRjQ7URzB9hONHcAAcgVCHtBtqICI4Z6LaA8sp1GMCOQ7QSyAcvLDf4Fs8YtAAAAAElFTkSuQmCC");
+  }
+  
+  .container{
+    padding: 0.675rem;
+    min-width: 30%;
+    border-radius: 0.45rem;
+    background-color: #1d1e22;
+    box-shadow: 0 5px 30px rgba(1, 1, 1, 0.3);
+  }
+  
+  label {
+    position: relative;
+    margin-bottom: 7px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    cursor: pointer;
+  }
+  label a {
+    text-decoration: none;
+    color: #7a7a8c;
+  }
+  label.active, label:hover {
+    background: linear-gradient(to right, #ff8a00, #da1b60);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .checkbox {
+    position: relative;
+    margin-right: 1rem;
+    width: 2rem;
+    height: 2rem;
+    fill: none;
+    stroke-width: 3;
+    stroke-linecap: round;
+  }
+  .checkbox rect {
+    stroke: #312d3c;
+  }
+  
+  input {
+    display: none;
+  }
+  input:checked + label .checkbox #colors {
+    stroke: url(#gradient);
+    stroke-dasharray: 145;
+    stroke-dashoffset: 145;
+    animation: checked 1000ms ease forwards;
+  }
+  input:checked + label .checkbox path,
+  input:checked + label .checkbox polyline {
+    stroke: url(#gradient);
+    stroke-dasharray: 40;
+    stroke-dashoffset: 40;
+    animation: checked 1000ms ease forwards;
+  }
+  input:checked + label .checkbox path {
+    stroke-dasharray: 220;
+    stroke-dashoffset: 220;
+  }
+  
+  @keyframes checked {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }

@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    padding: 0 8%;
+    height: 100vh;
+    background-color: rgb(29, 29, 29);
+    display: flex;
+    align-items: center;
+  }
+  button{
+    border: none;
+    cursor: pointer;
+    background-color: unset;
+    font-family: 'Varela Round' , sans-serif;
+  }
+  .btn-container{
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .btn{
+    height: 52px;
+    border-radius: 30px;
+    font-size: 16px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+  }
+  #buy-now{
+    width: 35%;
+    min-width: 140px ;
+    background-color: rgb(255, 94, 94);
+    padding: 6px;
+  }
+  #how-to-order{
+    width: 45%;
+    min-width: 180px;
+    padding: 0;
+  }
+  .btn-container .btn-icon{
+    font-size: 18px;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.8s;
+  
+  }
+  .fa-shopping-bag{
+    width: 40px;
+    background-color: rgb(255, 216, 89);
+  }
+  .fa-play{
+    width: 52px;
+    color: rgb(255, 216, 89);
+    border-left:5px solid rgb(255, 94, 94) ;
+  }
+  .btn:hover .btn-icon{
+    width: 100%;
+    border-radius:25px;
+  }
+  .btn:nth-child(1) .btn-text{
+    font-weight: 600;
+  }
+  .btn:nth-child(2) .btn-text{
+    color: aliceblue;
+  }
+  .btn-container .btn:hover .btn-text{
+    display: none;
+  }

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Tailwind CSS Accordion</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="w-full h-screen flex items-center justify-center">
+      <div class="accordion w-[644px]">
+        <div class="accordion-item border-b border-[#ccc] mb-3">
+          <div class="accordion-header bg-gray-300 cursor-pointer flex items-center justify-between p-3 font-inter font-medium hover:bg-gray-200 duration-200 ease-out text-2xl">
+            Accordion 1<span class="accordion-icon inline-block rotate-0 duration-200 ease-out"><i class="fa-solid fa-chevron-down accordion-icon"></i></span>
+          </div>
+          <div class="accordion-content bg-gray-100 h-0 overflow-hidden duration-200 ease-out">
+            <div class="p-3 text-lg">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis expedita sint laudantium ut
+              doloremque molestias pariatur, impedit harum, sequi blanditiis voluptates. Corporis delectus
+              possimus necessitatibus. Officia, dolor quaerat minima esse odio ipsam consectetur consequuntur.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item border-b border-[#ccc] mb-3">
+          <div class="accordion-header bg-gray-300 cursor-pointer flex items-center justify-between p-3 font-medium hover:bg-gray-200 duration-200 ease-out text-2xl">
+            Accordion 2 <span class="accordion-icon inline-block rotate-0 duration-200 ease-out"><i class="fa-solid fa-chevron-down accordion-icon"></i></span>
+          </div>
+          <div class="accordion-content bg-gray-100  h-0 overflow-hidden duration-200 ease-out">
+            <div class="p-3 text-xl">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui nam consectetur suscipit
+              consequatur debitis dicta. Quae eveniet minus unde facere deserunt aliquid. Voluptatibus tempore
+              vitae quaerat dolorem vero possimus earum pariatur cumque dignissimos ex, voluptas laudantium
+              adipisci soluta perspiciatis laboriosam, eveniet maiores quo aliquam iusto ullam quos deserunt
+              explicabo. Quam!
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item border-b border-[#ccc] mb-3">
+          <div class="accordion-header bg-gray-300 cursor-pointer flex items-center justify-between p-3 font-medium hover:bg-gray-200 duration-200 ease-out text-2xl">
+            Accordion 3 <span class="accordion-icon inline-block rotate-0 duration-200 ease-out"><i class="fa-solid fa-chevron-down accordion-icon"></i></span>
+          </div>
+          <div class="accordion-content bg-gray-100 h-0 overflow-hidden duration-200 ease-out">
+            <div class="p-3 text-xl">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, perspiciatis odit aliquid
+              aliquam magnam eaque et accusamus molestiae voluptates voluptatibus? Ex praesentium enim omnis,
+              illo aspernatur eius quasi nostrum ut obcaecati voluptatum dolore atque? Enim dolores ipsa neque
+              sunt sint a optio consectetur eos sed nesciunt non perspiciatis, doloremque earum!
+
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, recusandae?
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src='https://cdn.tailwindcss.com'></script>
+    <script src="script.js"></script>
+  </body>
+</html>

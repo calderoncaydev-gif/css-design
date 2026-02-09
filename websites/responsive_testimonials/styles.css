@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap");
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  font-family: "Nanum Myeongjo", serif;
+  background: #fef6e4;
+}
+
+.background {
+  height: 100%;
+  overflow: scroll;
+  display: flex;
+  z-index: 2;
+}
+.background::before {
+  content: "";
+  position: absolute;
+  inset: 0px;
+  z-index: 3;
+  mix-blend-mode: normal;
+  filter: opacity(50%);
+  pointer-events: none;
+  background: url(https://grainy-gradients.vercel.app/noise.svg);
+}
+
+.center {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 5rem;
+  max-width: 800px;
+  width: 100%;
+}
+.center--row:first-of-type {
+  display: flex;
+}
+.center--row:first-of-type > div {
+  flex: 1;
+}
+.center--row:last-of-type {
+  display: block;
+  margin-top: 180px;
+  display: flex;
+  flex-direction: column;
+}
+.center .title h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 3.5rem;
+  color: #001858;
+}
+.center .title p {
+  color: #172c66;
+  font-size: 1.25rem;
+  margin-top: 10px;
+}
+.center .title button {
+  background: #fef6e4;
+  border: none;
+  margin-top: 25px;
+  position: relative;
+  padding: 10px 0;
+  font-size: 1rem;
+  box-sizing: border-box;
+  cursor: pointer;
+  z-index: 0;
+}
+.center .title button span {
+  background: #fef6e4;
+  border-radius: 2px;
+  color: #001858;
+  padding: 10px 15px;
+}
+.center .title button:hover::after {
+  box-shadow: #f3d2c1 0px 0px 10px 0px, #f582ae 0px 0px 20px 0px;
+}
+.center .title button::after {
+  content: "";
+  transition: box-shadow 0.3s ease-in;
+  position: absolute;
+  background: linear-gradient(to right, #f582ae, #8bd3dd);
+  inset: -3px;
+  border-radius: 5px;
+  z-index: -1;
+}
+.center .card-container {
+  position: relative;
+}
+.center .card-container .card {
+  position: absolute;
+  border-radius: 5px;
+  padding: 15px 25px;
+  color: #172c66;
+  font-size: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+.center .card-container .card--title {
+  font-weight: 700;
+}
+.center .card-container .card--body {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+.center .card-container .card--author {
+  font-weight: 800;
+  font-size: 0.75rem;
+  margin-inline: auto 25px;
+}
+.center .card-container .card--one {
+  background: #f3d2c155;
+  top: -80px;
+  left: -70px;
+}
+.center .card-container .card--two {
+  background: #8bd3dd44;
+  top: 50px;
+  right: -90px;
+}
+.center .card-container .card--three {
+  background: #f582ae44;
+  bottom: -120px;
+  left: 0px;
+}
+.center .menu-container h2 {
+  margin-inline: auto;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #001858;
+}
+.center .menu-container .menu {
+  margin-inline: auto;
+  display: flex;
+  margin-top: 20px;
+  gap: 50px 25px;
+}
+.center .menu-container .menu--item {
+  display: flex;
+  flex-direction: column;
+}
+.center .menu-container .menu--item h3 {
+  margin-inline: auto;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #001858;
+}
+.center .menu-container .menu--item ul {
+  margin-top: 10px;
+}
+.center .menu-container .menu--item ul li {
+  margin: 10px 0;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+  .card-container {
+    flex-direction: column;
+  }
+  .card-container .card {
+    box-sizing: border-box;
+    width: 100% !important;
+  }
+
+  .menu {
+    flex-direction: column;
+  }
+}
+@media (max-width: 1000px) {
+  .center {
+    box-sizing: border-box;
+    padding: 50px 10px !important;
+  }
+  .center .center--row:first-of-type {
+    flex-direction: column;
+  }
+  .center .center--row:first-of-type .card-container {
+    margin-top: 25px;
+    display: flex;
+    gap: 15px;
+  }
+  .center .center--row:first-of-type .card-container .card {
+    inset: initial !important;
+    position: relative !important;
+  }
+  .center .menu-container {
+    margin-top: 50px !important;
+  }
+}

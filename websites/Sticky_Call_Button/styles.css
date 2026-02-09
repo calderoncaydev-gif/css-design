@@ -1,0 +1,31 @@
+.fixed-tel {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    z-index: 9999;
+    text-align: center;
+  }
+  
+  .fixed-tel:before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    background-color: #ff5f13;
+    position: absolute;
+    border-radius: 100%;
+    box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, .12), 0 1px 1px 0 rgba(0, 0, 0, .24);
+    z-index: 1;
+    top: 0;
+    left: 0;
+  }
+  
+  .fixed-tel i {
+    vertical-align: middle;
+    z-index: 2;
+    position: relative;
+    color: #030f27;
+    font-size: 1.5rem;
+  }
